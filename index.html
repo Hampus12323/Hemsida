@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bananer</title>
     <style>
-        
+        .Maintext{
+            margin-left: 40%;
+            margin-top: 5%;
+            Font-size: 40px;
+
+        }
+        .Undertext{
+            margin-left: 40%;
+            font-size: 24px;
+            margin-top: 3%;
+
+
+        }
+        .Undertext2{
+            margin-left: 38%;
+            font-size: 24px;
+            margin-top: 2%
+        }
+        .Undertext3{
+            Margin-left: 35%;
+            Font-size: 24px;
+            margin-top: 25px;
+            
+        }
+        .buttonstyle{
+            width: 125px;
+            height: 125px;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+       
     </style>
 </head>
 <body>
-    <a href="sida2.html">asd</a>
+<button class="buttonstyle" onclick="klick()">+1 Banan</button>
+<div id="bananerdisplay">0</div>
+<button class="buttonstyle" onclick="upgrade()">Upgrade cost 10</button>
+
+
+<div Class="Maintext">Fakta Om Bananer</div>
+<div Class="Undertext">Bananer är gula och kan bli bruna</div>
+<div class="Undertext2">Om man skalar en banans skal så blir den vit</div>
+<div class="Undertext3">Banan är ett sorts bär, även om det ser ur som en frukt</div>
+
 </body>
+<script>
+    banana = 0;
+    bpc = 1;
+function klick(){
+    banana=banana + bpc;
+    document.getElementById("bananerdisplay").innerHTML = banana;
+}
+function upgrade(){     
+    if(banana>9){
+            banana=banana - 10;
+            document.getElementById("bananerdisplay").innerHTML = banana;
+            bpc=bpc + 4;
+
+        }
+    }
+
+</script>
 </html>
